@@ -12,6 +12,7 @@ Galaxy PDAUG Workbench 
 # Requirements
 
  - [Docker](https://docs.docker.com/installation/) for Linux / Windows / OSX
+ 
  - [Kitematic](https://kitematic.com/) for Windows / OS-X (Optional)
 
 # Usage
