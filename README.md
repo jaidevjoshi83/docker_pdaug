@@ -28,6 +28,7 @@ For more details about this command line or specific usage, please consult the
 
 # Contributors
  - Jayadev Joshi
+ 
  - Daniel Blankenberg
 
 # History
