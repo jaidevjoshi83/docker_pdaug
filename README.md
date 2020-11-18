@@ -20,7 +20,7 @@ Galaxy PDAUG Workbench 
 To launch:
 
 ```
-docker run -i -t -p 8080:80 jayadevjoshi12/galaxy_pdaug
+docker run -i -t -p 8080:80 jayadevjoshi12/galaxy_pdaug:0.1.0
 ```
 
 For more details about this command line or specific usage, please consult the
