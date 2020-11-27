@@ -7,9 +7,80 @@ install_resolver_dependencies: true
 install_tool_dependencies: false
 
 tools:
-- name: suite_pdaug
+- name: pdaug_peptide_core_descriptors
   owner: jay
   tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_core_functions
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_data_access
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_data_plotting 
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_global_descriptors
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_length_distribution
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_ngrams
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_sequence_analysis
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_structure_builder
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_sequence_based_peptide_generation
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_sequence_property_based_descriptors
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"  
+- name: pdaug_sequence_similarity_network
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_tsvtofasta
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_uversky_plot
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_word_vector_descriptor
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_word_vector_model 
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_aa_property_based_peptide_descriptor    
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"  
+- name: pdaug_aa_property_based_peptide_generation    
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_addclasslabel     
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_basic_plots   
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_fishers_plot    
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_merge_dataframes    
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_ml_models     
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+- name: pdaug_peptide_cd_spectral_analysis    
+  owner: jay
+  tool_panel_section_label: "PDAUG Galaxy"
+
+
 
 
 
