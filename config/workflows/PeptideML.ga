@@ -1,745 +1,734 @@
 {
-    "a_galaxy_workflow": "true",
-    "annotation": "ML Modeling of Anti-cancer Peptides",
-    "format-version": "0.1",
-    "name": "PeptideML",
+    "a_galaxy_workflow": "true", 
+    "annotation": "ML Modeling of Anti-cancer Peptides", 
+    "format-version": "0.1", 
+    "name": "PeptideML", 
     "steps": {
         "0": {
-            "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 0,
-            "input_connections": {},
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "",
+                    "description": "", 
                     "name": "ACPs"
                 }
-            ],
-            "label": "ACPs",
-            "name": "Input dataset",
-            "outputs": [],
+            ], 
+            "label": "ACPs", 
+            "name": "Input dataset", 
+            "outputs": [], 
             "position": {
-                "left": 200,
-                "top": 200
-            },
-            "tool_id": null,
-            "tool_state": "{\"optional\": false}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "471cb99c-89a3-4e6e-930a-b344d2b44b14",
+                "left": 252.96875, 
+                "top": 209.9609375
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"optional\": false}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "4169fde6-544f-4351-b0d7-f26323932276", 
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "42d82d3d-cf3e-4fcb-af8d-9cb401bfe362"
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "3a1adf6a-8f64-4c61-b157-3cd67318bc9c"
                 }
             ]
-        },
+        }, 
         "1": {
-            "annotation": "",
-            "content_id": null,
-            "errors": null,
-            "id": 1,
-            "input_connections": {},
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
             "inputs": [
                 {
-                    "description": "",
+                    "description": "", 
                     "name": "non-ACPs"
                 }
-            ],
-            "label": "non-ACPs",
-            "name": "Input dataset",
-            "outputs": [],
+            ], 
+            "label": "non-ACPs", 
+            "name": "Input dataset", 
+            "outputs": [], 
             "position": {
-                "left": 200,
-                "top": 271.1999969482422
-            },
-            "tool_id": null,
-            "tool_state": "{\"optional\": false}",
-            "tool_version": null,
-            "type": "data_input",
-            "uuid": "1690c4bb-afa2-47cf-9a34-381d59ac348d",
+                "left": 248.984375, 
+                "top": 498.96484375
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"optional\": false}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "74aa2a9d-7af8-4b18-b6c8-403a14cd90f7", 
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "c740e19d-2e5e-4c00-b641-7ceac87c76f9"
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "746729c6-3b20-4478-8545-30990db1b400"
                 }
             ]
-        },
+        }, 
         "2": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0",
-            "errors": null,
-            "id": 2,
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0", 
+            "errors": null, 
+            "id": 2, 
             "input_connections": {
                 "input1": {
-                    "id": 0,
+                    "id": 0, 
                     "output_name": "output"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG Sequence Property Based Descriptors",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG Sequence Property Based Descriptors", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
                 }
-            ],
+            ], 
             "position": {
-                "left": 428.79998779296875,
-                "top": 200
-            },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0",
-            "tool_shed_repository": {
-                "changeset_revision": "0a31e26e68d7",
-                "name": "pdaug_sequence_property_based_descriptors",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelectDiscriptor\": {\"DesType\": \"CTD\", \"__current_case__\": 9}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "d751bc15-62a7-4c2b-959d-ec32b7bf9929",
-            "workflow_outputs": [
-                {
-                    "label": null,
-                    "output_name": "output1",
-                    "uuid": "4ce6e57c-1fb3-4ccb-857a-13f1a50e3fe7"
-                }
-            ]
-        },
-        "3": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0",
-            "errors": null,
-            "id": 3,
-            "input_connections": {
-                "input1": {
-                    "id": 1,
-                    "output_name": "output"
-                }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG Sequence Property Based Descriptors",
-            "outputs": [
-                {
-                    "name": "output1",
-                    "type": "tabular"
-                }
-            ],
-            "position": {
-                "left": 428.79998779296875,
-                "top": 360
-            },
+                "left": 480.21484375, 
+                "top": 167.734375
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0",
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0a31e26e68d7",
-                "name": "pdaug_sequence_property_based_descriptors",
-                "owner": "jay",
+                "changeset_revision": "dd4523d4ae2f", 
+                "name": "pdaug_sequence_property_based_descriptors", 
+                "owner": "jay", 
                 "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelectDiscriptor\": {\"DesType\": \"CTD\", \"__current_case__\": 9}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "16e15d2b-5a45-43ec-bde9-2e657570238d",
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"SelectDiscriptor\": {\"__current_case__\": 10, \"DesType\": \"GetCTD\"}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "d5c98953-15e4-492f-98a2-81812758c1f2", 
             "workflow_outputs": []
-        },
-        "4": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0",
-            "errors": null,
-            "id": 4,
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0", 
+            "errors": null, 
+            "id": 3, 
             "input_connections": {
                 "input1": {
-                    "id": 2,
-                    "output_name": "output1"
+                    "id": 1, 
+                    "output_name": "output"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG Add Class Label",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG Sequence Property Based Descriptors", 
             "outputs": [
                 {
-                    "name": "OutFile1",
+                    "name": "output1", 
                     "type": "tabular"
                 }
-            ],
+            ], 
             "position": {
-                "left": 657.6000061035156,
-                "top": 200
-            },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0",
+                "left": 472.20703125, 
+                "top": 493.69140625
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "378a786e9236",
-                "name": "pdaug_addclasslabel",
-                "owner": "jay",
+                "changeset_revision": "dd4523d4ae2f", 
+                "name": "pdaug_sequence_property_based_descriptors", 
+                "owner": "jay", 
                 "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"ClassLabel\": \"0\", \"ClassLabelTitle\": \"Class_label\", \"input1\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "37498ada-bad4-456d-91e6-f21a6fe98c5d",
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"SelectDiscriptor\": {\"__current_case__\": 10, \"DesType\": \"GetCTD\"}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "a163b5c3-58ed-4a7b-bbab-2db03e4091ac", 
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "OutFile1",
-                    "uuid": "47d6dd33-c08f-4818-87f5-02eb73dc97b5"
+                    "label": null, 
+                    "output_name": "output1", 
+                    "uuid": "ec4b3b7e-35f7-430e-bb34-a5cab21d6853"
                 }
             ]
-        },
-        "5": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0",
-            "errors": null,
-            "id": 5,
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0", 
+            "errors": null, 
+            "id": 4, 
             "input_connections": {
                 "input1": {
-                    "id": 3,
+                    "id": 2, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG Add Class Label",
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool PDAUG Add Class Label", 
+                    "name": "input1"
+                }
+            ], 
+            "label": "anti-cancer peptide labeled as 1", 
+            "name": "PDAUG Add Class Label", 
             "outputs": [
                 {
-                    "name": "OutFile1",
+                    "name": "OutFile1", 
                     "type": "tabular"
                 }
-            ],
+            ], 
             "position": {
-                "left": 657.6000061035156,
-                "top": 344
-            },
+                "left": 781.97265625, 
+                "top": 297.98828125
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0", 
+            "tool_shed_repository": {
+                "changeset_revision": "c44e03414320", 
+                "name": "pdaug_addclasslabel", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"ClassLabel\": \"1\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": {\"__class__\": \"RuntimeValue\"}, \"ClassLabelTitle\": \"Class_label\"}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "cd7244b5-d8c5-43b2-b8f1-713e9371a05f", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "OutFile1", 
+                    "uuid": "a82254e1-5432-4b36-9cc2-067c5496faac"
+                }
+            ]
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "input1": {
+                    "id": 3, 
+                    "output_name": "output1"
+                }
+            }, 
+            "inputs": [], 
+            "label": "anti-cancer peptide labeled as 0", 
+            "name": "PDAUG Add Class Label", 
+            "outputs": [
+                {
+                    "name": "OutFile1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 785.9765625, 
+                "top": 444.98046875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionOutFile1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "OutFile1"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "378a786e9236",
-                "name": "pdaug_addclasslabel",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"ClassLabel\": \"1\", \"ClassLabelTitle\": \"Class_label\", \"input1\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "01c0335f-804f-4224-94b8-b4a7d38f356f",
+                "changeset_revision": "c44e03414320", 
+                "name": "pdaug_addclasslabel", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"ClassLabel\": \"0\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"ClassLabelTitle\": \"Class_label\"}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "44c66fbe-1d7e-40ef-aae7-f62b5a315b87", 
             "workflow_outputs": []
-        },
+        }, 
         "6": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0",
-            "errors": null,
-            "id": 6,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0", 
+            "errors": null, 
+            "id": 6, 
             "input_connections": {
                 "input1": [
                     {
-                        "id": 4,
+                        "id": 4, 
                         "output_name": "OutFile1"
-                    },
+                    }, 
                     {
-                        "id": 5,
+                        "id": 5, 
                         "output_name": "OutFile1"
                     }
                 ]
-            },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool PDAUG Merge Dataframes",
-                    "name": "input1"
-                }
-            ],
-            "label": null,
-            "name": "PDAUG Merge Dataframes",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG Merge Dataframes", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
                 }
-            ],
+            ], 
             "position": {
-                "left": 886.3999938964844,
-                "top": 200
-            },
-            "post_job_actions": {
-                "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
-                    "output_name": "output1"
-                }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0",
+                "left": 1104.98046875, 
+                "top": 434.9609375
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "b5a9f541c6f8",
-                "name": "pdaug_merge_dataframes",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"input1\": {\"__class__\": \"RuntimeValue\"}, \"selmethod\": {\"method\": \"default\", \"__current_case__\": 1}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "b73c86dc-7ba6-4d29-8515-68854ff3c43b",
+                "changeset_revision": "7a11b0add346", 
+                "name": "pdaug_merge_dataframes", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "569cd1db-3db9-4d22-95a2-0bf568817569", 
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "output1",
-                    "uuid": "e3ce7e30-77d1-4224-8c00-7ddac0168cca"
+                    "label": null, 
+                    "output_name": "output1", 
+                    "uuid": "3fa17afb-186a-44e1-971a-ea2a5654e01c"
                 }
             ]
-        },
+        }, 
         "7": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
-            "errors": null,
-            "id": 7,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
+            "errors": null, 
+            "id": 7, 
             "input_connections": {
                 "input1": {
-                    "id": 6,
+                    "id": 6, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG ML Models",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG ML Models", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
-                },
+                }, 
                 {
-                    "name": "output2",
+                    "name": "output2", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1115.2000122070312,
-                "top": 200
-            },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
+                "left": 1433.984375, 
+                "top": 281.9921875
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0b17bc2ddcdd",
-                "name": "pdaug_ml_models",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelMLAlgo\": {\"MLAlgo\": \"SVMC\", \"__current_case__\": 0, \"settings\": {\"advanced\": \"simple\", \"__current_case__\": 0}}, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"__current_case__\": 0, \"nFolds\": \"10\"}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "670d3053-75fe-4e1f-80a3-ca5a8d46448c",
+                "changeset_revision": "d70b95c769ee", 
+                "name": "pdaug_ml_models", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__rerun_remap_job_id__\": null, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"nFolds\": \"10\", \"__current_case__\": 0}, \"SelMLAlgo\": {\"MLAlgo\": \"LRC\", \"__current_case__\": 5, \"settings\": {\"__current_case__\": 0, \"advanced\": \"simple\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "f8672b12-5305-4a4f-9b45-b4f200b46696", 
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "output2",
-                    "uuid": "18a6b311-3cf4-4d6e-9fea-62b9633a9953"
-                },
+                    "label": null, 
+                    "output_name": "output2", 
+                    "uuid": "2d0b71e9-5c94-404e-b934-f103ab6c5df9"
+                }, 
                 {
-                    "label": null,
-                    "output_name": "output1",
-                    "uuid": "bf8f300a-b4d8-448b-9b6a-ce55bb5cb1a1"
+                    "label": null, 
+                    "output_name": "output1", 
+                    "uuid": "f980859e-5c13-4b7a-bff0-926f878c0c24"
                 }
             ]
-        },
+        }, 
         "8": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
-            "errors": null,
-            "id": 8,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
+            "errors": null, 
+            "id": 8, 
             "input_connections": {
                 "input1": {
-                    "id": 6,
+                    "id": 6, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG ML Models",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG ML Models", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
-                },
+                }, 
                 {
-                    "name": "output2",
+                    "name": "output2", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1115.2000122070312,
-                "top": 400
-            },
+                "left": 1433.984375, 
+                "top": 471.9921875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
-                },
+                }, 
                 "HideDatasetActionoutput2": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output2"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0b17bc2ddcdd",
-                "name": "pdaug_ml_models",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelMLAlgo\": {\"MLAlgo\": \"SGDC\", \"__current_case__\": 1, \"settings\": {\"advanced\": \"simple\", \"__current_case__\": 0}}, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"__current_case__\": 0, \"nFolds\": \"10\"}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "a837e0f5-182f-4a80-b02f-76879d8cf697",
+                "changeset_revision": "d70b95c769ee", 
+                "name": "pdaug_ml_models", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__rerun_remap_job_id__\": null, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"nFolds\": \"10\", \"__current_case__\": 0}, \"SelMLAlgo\": {\"MLAlgo\": \"RFC\", \"__current_case__\": 4, \"settings\": {\"__current_case__\": 0, \"advanced\": \"simple\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "9ce7e487-4df7-48f3-9685-3b1d6b654b85", 
             "workflow_outputs": []
-        },
+        }, 
         "9": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
-            "errors": null,
-            "id": 9,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
+            "errors": null, 
+            "id": 9, 
             "input_connections": {
                 "input1": {
-                    "id": 6,
+                    "id": 6, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG ML Models",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG ML Models", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
-                },
+                }, 
                 {
-                    "name": "output2",
+                    "name": "output2", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1115.2000122070312,
-                "top": 600
-            },
+                "left": 1433.984375, 
+                "top": 661.9921875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
-                },
+                }, 
                 "HideDatasetActionoutput2": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output2"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0b17bc2ddcdd",
-                "name": "pdaug_ml_models",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelMLAlgo\": {\"MLAlgo\": \"DTC\", \"__current_case__\": 2, \"settings\": {\"advanced\": \"simple\", \"__current_case__\": 0}}, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"__current_case__\": 0, \"nFolds\": \"10\"}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "3092caee-5f23-44cb-b305-eea61c1e01b1",
+                "changeset_revision": "d70b95c769ee", 
+                "name": "pdaug_ml_models", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__rerun_remap_job_id__\": null, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"nFolds\": \"10\", \"__current_case__\": 0}, \"SelMLAlgo\": {\"MLAlgo\": \"GBC\", \"__current_case__\": 3, \"settings\": {\"__current_case__\": 0, \"advanced\": \"simple\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "a658012d-9e3b-47f5-a3ee-4fcc7fdf1c04", 
             "workflow_outputs": []
-        },
+        }, 
         "10": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
-            "errors": null,
-            "id": 10,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
+            "errors": null, 
+            "id": 10, 
             "input_connections": {
                 "input1": {
-                    "id": 6,
+                    "id": 6, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG ML Models",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG ML Models", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
-                },
+                }, 
                 {
-                    "name": "output2",
+                    "name": "output2", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1115.2000122070312,
-                "top": 800
-            },
+                "left": 1433.984375, 
+                "top": 871.9921875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
-                },
+                }, 
                 "HideDatasetActionoutput2": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output2"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0b17bc2ddcdd",
-                "name": "pdaug_ml_models",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelMLAlgo\": {\"MLAlgo\": \"GBC\", \"__current_case__\": 3, \"settings\": {\"advanced\": \"simple\", \"__current_case__\": 0}}, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"__current_case__\": 0, \"nFolds\": \"10\"}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "e2d41a38-0384-4ff0-b68e-524c9068bcdc",
+                "changeset_revision": "d70b95c769ee", 
+                "name": "pdaug_ml_models", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__rerun_remap_job_id__\": null, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"nFolds\": \"10\", \"__current_case__\": 0}, \"SelMLAlgo\": {\"MLAlgo\": \"DTC\", \"__current_case__\": 2, \"settings\": {\"__current_case__\": 0, \"advanced\": \"simple\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "1cd7ef3b-3113-4dfc-b742-0a78d0b771a5", 
             "workflow_outputs": []
-        },
+        }, 
         "11": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
-            "errors": null,
-            "id": 11,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
+            "errors": null, 
+            "id": 11, 
             "input_connections": {
                 "input1": {
-                    "id": 6,
+                    "id": 6, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG ML Models",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG ML Models", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
-                },
+                }, 
                 {
-                    "name": "output2",
+                    "name": "output2", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1115.2000122070312,
-                "top": 1000
-            },
+                "left": 1433.984375, 
+                "top": 1061.9921875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
-                },
+                }, 
                 "HideDatasetActionoutput2": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output2"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0b17bc2ddcdd",
-                "name": "pdaug_ml_models",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelMLAlgo\": {\"MLAlgo\": \"RFC\", \"__current_case__\": 4, \"settings\": {\"advanced\": \"simple\", \"__current_case__\": 0}}, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"__current_case__\": 0, \"nFolds\": \"10\"}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "0af53fd9-498f-47ce-b820-33d17acf6db6",
+                "changeset_revision": "d70b95c769ee", 
+                "name": "pdaug_ml_models", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__rerun_remap_job_id__\": null, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"nFolds\": \"10\", \"__current_case__\": 0}, \"SelMLAlgo\": {\"MLAlgo\": \"SGDC\", \"__current_case__\": 1, \"settings\": {\"__current_case__\": 0, \"advanced\": \"simple\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "41094eba-e306-4951-b8bc-d852aa7a1c61", 
             "workflow_outputs": []
-        },
+        }, 
         "12": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
-            "errors": null,
-            "id": 12,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
+            "errors": null, 
+            "id": 12, 
             "input_connections": {
                 "input1": {
-                    "id": 6,
+                    "id": 6, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG ML Models",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG ML Models", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
-                },
+                }, 
                 {
-                    "name": "output2",
+                    "name": "output2", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1115.2000122070312,
-                "top": 1200
-            },
+                "left": 1433.984375, 
+                "top": 1291.9921875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
-                },
+                }, 
                 "HideDatasetActionoutput2": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output2"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_ml_models/pdaug_ml_models/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "0b17bc2ddcdd",
-                "name": "pdaug_ml_models",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelMLAlgo\": {\"MLAlgo\": \"LRC\", \"__current_case__\": 5, \"settings\": {\"advanced\": \"simple\", \"__current_case__\": 0}}, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"__current_case__\": 0, \"nFolds\": \"10\"}, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "76acddc8-bef5-4bfe-aed4-fb6be7e04a7c",
+                "changeset_revision": "d70b95c769ee", 
+                "name": "pdaug_ml_models", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}, \"scalling\": \"Min_Max\", \"__rerun_remap_job_id__\": null, \"TestMethods\": {\"SelTestMethods\": \"Internal\", \"nFolds\": \"10\", \"__current_case__\": 0}, \"SelMLAlgo\": {\"MLAlgo\": \"SVMC\", \"__current_case__\": 0, \"settings\": {\"__current_case__\": 0, \"advanced\": \"simple\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "b8366ed1-3aef-4469-95f8-748c02e5288c", 
             "workflow_outputs": []
-        },
+        }, 
         "13": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0",
-            "errors": null,
-            "id": 13,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0", 
+            "errors": null, 
+            "id": 13, 
             "input_connections": {
                 "input1": [
                     {
-                        "id": 7,
+                        "id": 7, 
                         "output_name": "output1"
-                    },
+                    }, 
                     {
-                        "id": 8,
+                        "id": 8, 
                         "output_name": "output1"
-                    },
+                    }, 
                     {
-                        "id": 9,
+                        "id": 9, 
                         "output_name": "output1"
-                    },
+                    }, 
                     {
-                        "id": 10,
+                        "id": 10, 
                         "output_name": "output1"
-                    },
+                    }, 
                     {
-                        "id": 11,
+                        "id": 11, 
                         "output_name": "output1"
-                    },
+                    }, 
                     {
-                        "id": 12,
+                        "id": 12, 
                         "output_name": "output1"
                     }
                 ]
-            },
-            "inputs": [
-                {
-                    "description": "runtime parameter for tool PDAUG Merge Dataframes",
-                    "name": "input1"
-                }
-            ],
-            "label": null,
-            "name": "PDAUG Merge Dataframes",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG Merge Dataframes", 
             "outputs": [
                 {
-                    "name": "output1",
+                    "name": "output1", 
                     "type": "tabular"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1344,
-                "top": 200
-            },
+                "left": 1761.9921875, 
+                "top": 281.9921875
+            }, 
             "post_job_actions": {
                 "HideDatasetActionoutput1": {
-                    "action_arguments": {},
-                    "action_type": "HideDatasetAction",
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
                     "output_name": "output1"
                 }
-            },
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0",
+            }, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "b5a9f541c6f8",
-                "name": "pdaug_merge_dataframes",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"input1\": {\"__class__\": \"RuntimeValue\"}, \"selmethod\": {\"method\": \"default\", \"__current_case__\": 1}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "785c5f2e-2122-430d-af5b-b2c9cfb85d53",
+                "changeset_revision": "7a11b0add346", 
+                "name": "pdaug_merge_dataframes", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input1\": {\"__class__\": \"ConnectedValue\"}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "87992fb2-217e-4b82-ac6a-e797ec347bfb", 
             "workflow_outputs": []
-        },
+        }, 
         "14": {
-            "annotation": "",
-            "content_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_basic_plots/pdaug_basic_plots/0.1.0",
-            "errors": null,
-            "id": 14,
+            "annotation": "", 
+            "content_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_basic_plots/pdaug_basic_plots/0.1.0", 
+            "errors": null, 
+            "id": 14, 
             "input_connections": {
                 "SelPlotting|InFile": {
-                    "id": 13,
+                    "id": 13, 
                     "output_name": "output1"
                 }
-            },
-            "inputs": [],
-            "label": null,
-            "name": "PDAUG Basic Plots",
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PDAUG Basic Plots", 
             "outputs": [
                 {
-                    "name": "output",
+                    "name": "output", 
                     "type": "html"
                 }
-            ],
+            ], 
             "position": {
-                "left": 1572.800048828125,
-                "top": 200
-            },
-            "post_job_actions": {},
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/jay/pdaug_basic_plots/pdaug_basic_plots/0.1.0",
+                "left": 2090, 
+                "top": 281.9921875
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "testtoolshed.g2.bx.psu.edu/repos/jay/pdaug_basic_plots/pdaug_basic_plots/0.1.0", 
             "tool_shed_repository": {
-                "changeset_revision": "080b372fe513",
-                "name": "pdaug_basic_plots",
-                "owner": "jay",
-                "tool_shed": "toolshed.g2.bx.psu.edu"
-            },
-            "tool_state": "{\"SelPlotting\": {\"Plot\": \"HeatMap\", \"__current_case__\": 0, \"InFile\": {\"__class__\": \"ConnectedValue\"}, \"IndexColumn\": \"Algo\", \"x_label\": \"Performance measures\", \"y_label\": \"ML algorithms \"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-            "tool_version": "0.1.0",
-            "type": "tool",
-            "uuid": "dad0ec0d-cef5-49f9-8592-f83bb8cb03e5",
+                "changeset_revision": "c29c5fcc7e94", 
+                "name": "pdaug_basic_plots", 
+                "owner": "jay", 
+                "tool_shed": "testtoolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"SelPlotting\": {\"Plot\": \"HeatMap\", \"IndexColumn\": \"Algo\", \"x_label\": \"Performance Measures\", \"y_label\": \"Algorithms\", \"__current_case__\": 0, \"InFile\": {\"__class__\": \"ConnectedValue\"}}}", 
+            "tool_version": "0.1.0", 
+            "type": "tool", 
+            "uuid": "d253fdc1-ac22-4f42-8771-a6e87deaed4f", 
             "workflow_outputs": [
                 {
-                    "label": null,
-                    "output_name": "output",
-                    "uuid": "8e28f651-ba58-43dc-b894-074fe90aa50a"
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "8efedb9e-eaa2-4ada-978d-cc1ad8714588"
                 }
             ]
         }
-    },
-    "tags": ["proteomics"],
-    "uuid": "34934941-386e-4b75-8af0-bbde7193a163",
-    "version": 1
+    }, 
+    "tags": ["proteomics"], 
+    "uuid": "34934941-386e-4b75-8af0-bbde7193a163", 
+    "version": 12
 }
