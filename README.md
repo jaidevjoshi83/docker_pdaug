@@ -23,6 +23,14 @@ To launch:
 docker run -i -t -p 8080:80 jayadevjoshi12/galaxy_pdaug:latest
 ```
 
+# Accessing the example workflows 
+
+Login through the user login tab and import the data to history from the data shared tab. 
+
+user id: admin
+passowrd: password
+
+
 For more details about this command line or specific usage, please consult the
 [`README`](https://github.com/bgruening/docker-galaxy-stable/blob/master/README.md) of the main Galaxy Docker image, on which the current image is based.
 
