@@ -27,8 +27,10 @@ docker run -i -t -p 8080:80 jayadevjoshi12/galaxy_pdaug:latest
 
 Login through the user login tab and import the data to history from the data shared tab. 
 
+```
 user id: admin
 passowrd: password
+```
 
 
 For more details about this command line or specific usage, please consult the
